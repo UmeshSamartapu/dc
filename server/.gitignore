@@ -1,0 +1,7 @@
+# inside backend folder
+node_modules
+.env
+
+# inside frontend folder
+/build
+/node_modules
