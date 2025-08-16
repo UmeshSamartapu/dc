@@ -55,8 +55,11 @@ const upload = multer({ storage: storage });
 // --- API Routes ---
 
 // 1. Authentication Route
-// The password is now read from an environment variable for better security
 const LOCK_SCREEN_PASSWORD = process.env.LOCK_SCREEN_PASSWORD || "password123";
+// --- DEBUG LOG ---
+// This will print the password being used to the Render logs
+console.log(`Server is using password: "${LOCK_SCREEN_PASSWORD}"`);
+
 
 app.post('/api/auth', (req, res) => {
   const { password } = req.body;
